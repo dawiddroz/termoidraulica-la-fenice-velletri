@@ -63,6 +63,9 @@
       }
     </style>
   </noscript>
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Termoidraulica La Fenice", "url": "https://dawiddroz.github.io/termoidraulica-la-fenice-velletri/", "telephone": "+39069476005", "address": {"@type": "PostalAddress", "streetAddress": "Viale Salvo D'Acquisto", "postalCode": "00049", "addressLocality": "Velletri", "addressRegion": "RM", "addressCountry": "IT"}, "geo": {"@type": "GeoCoordinates", "latitude": 41.6730667, "longitude": 12.774934}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.7, "reviewCount": 26, "bestRating": 5}, "sameAs": ["https://www.instagram.com/lafenicetermoidraulica"]}
+  </script>
 </head>
 
 <body>
@@ -358,7 +361,18 @@
                 </span>
                 <div>
                   <p class="contact__row-label">Orari</p>
-                  <p class="contact__row-value">Su chiamata — chiama e ci sentiamo</p>
+                  <table class="hours-table">
+                    <tbody>
+            <tr data-day="1"><td>Lunedì</td><td>Su chiamata</td></tr>
+            <tr data-day="2"><td>Martedì</td><td>Su chiamata</td></tr>
+            <tr data-day="3"><td>Mercoledì</td><td>Su chiamata</td></tr>
+            <tr data-day="4"><td>Giovedì</td><td>Su chiamata</td></tr>
+            <tr data-day="5"><td>Venerdì</td><td>Su chiamata</td></tr>
+            <tr data-day="6"><td>Sabato</td><td>Su chiamata</td></tr>
+            <tr data-day="7"><td>Domenica</td><td>Su chiamata</td></tr>
+                    </tbody>
+                  </table>
+                  <p class="hours-note">Chiama per confermare la disponibilità</p>
                 </div>
               </div>
             </div>
@@ -451,7 +465,8 @@
         <span>© 2026 Termoidraulica La Fenice — Velletri (RM)</span>
         <span>Termoidraulica dal 20+ anni · 6 filiali nel Lazio</span>
       </div>
-    </div>
+        <span><a href="privacy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a></span>
+  </div>
   </footer>
 
   <!-- ============ STICKY CTA MOBILE ============ -->
@@ -480,5 +495,12 @@
     })();
   </script>
 
+<script>
+  (function () {
+    var today = new Date().getDay(); /* 0 = domenica */
+    var row = document.querySelector('.hours-table tr[data-day="' + today + '"]');
+    if (row) row.classList.add('is-today');
+  })();
+</script>
 </body>
 </html>

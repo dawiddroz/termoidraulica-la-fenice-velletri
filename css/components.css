@@ -969,3 +969,12 @@ body.is-scrolled .nav {
 @media (max-width: 767px) {
   .sticky-cta { display: block; }
 }
+
+
+/* Orari: giorno corrente evidenziato (pattern Restore) */
+.hours-wrap { width: 100%; }
+.hours-table { width: 100%; border-collapse: collapse; margin-top: .35rem; font-size: .92rem; }
+.hours-table td { padding: .28rem .5rem; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+.hours-table tr.is-today td { color: var(--primary-strong); font-weight: 700; background: color-mix(in srgb, var(--primary) 7%, transparent); border-radius: 4px; }
+.hours-table tr.is-today td:first-child::after { content: " · oggi"; font-weight: 400; }
+.hours-note { font-size: .8rem; color: var(--ink-soft); margin-top: .4rem; }
