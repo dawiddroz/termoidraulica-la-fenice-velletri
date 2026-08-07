@@ -361,18 +361,7 @@
                 </span>
                 <div>
                   <p class="contact__row-label">Orari</p>
-                  <table class="hours-table">
-                    <tbody>
-            <tr data-day="1"><td>Lunedì</td><td>Su chiamata</td></tr>
-            <tr data-day="2"><td>Martedì</td><td>Su chiamata</td></tr>
-            <tr data-day="3"><td>Mercoledì</td><td>Su chiamata</td></tr>
-            <tr data-day="4"><td>Giovedì</td><td>Su chiamata</td></tr>
-            <tr data-day="5"><td>Venerdì</td><td>Su chiamata</td></tr>
-            <tr data-day="6"><td>Sabato</td><td>Su chiamata</td></tr>
-            <tr data-day="7"><td>Domenica</td><td>Su chiamata</td></tr>
-                    </tbody>
-                  </table>
-                  <p class="hours-note">Chiama per confermare la disponibilità</p>
+                  <p class="contact__row-value">Su chiamata</p>
                 </div>
               </div>
             </div>
@@ -495,12 +484,6 @@
     })();
   </script>
 
-<script>
-  (function () {
-    var today = new Date().getDay(); /* 0 = domenica */
-    var row = document.querySelector('.hours-table tr[data-day="' + today + '"]');
-    if (row) row.classList.add('is-today');
-  })();
-</script>
+
 </body>
 </html>
