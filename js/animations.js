@@ -30,12 +30,10 @@
       ScrollTrigger.create({
         trigger: el,
         start: 'top 82%',
+        once: true,
         onEnter: function () {
           gsap.fromTo(el, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' });
         },
-        onLeaveBack: function () {
-          gsap.set(el, { opacity: 1, y: 0 });
-        }
       });
     });
 
@@ -44,12 +42,10 @@
     ScrollTrigger.create({
       trigger: '.services__grid',
       start: 'top 82%',
+      once: true,
       onEnter: function () {
         gsap.fromTo('.service-card', { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: 0.65, stagger: 0.12, ease: 'power3.out' });
       },
-      onLeaveBack: function () {
-        gsap.set('.service-card', { opacity: 1, y: 0 });
-      }
     });
 
     /* Trust stats: stagger di gruppo */
@@ -57,12 +53,10 @@
     ScrollTrigger.create({
       trigger: '.trust__card',
       start: 'top 85%',
+      once: true,
       onEnter: function () {
         gsap.fromTo('.trust__stat', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.55, stagger: 0.1, ease: 'power3.out' });
       },
-      onLeaveBack: function () {
-        gsap.set('.trust__stat', { opacity: 1, y: 0 });
-      }
     });
 
     /* Parallax sottile sull'immagine "chi siamo" */
