@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Termoidraulica La Fenice — Caldaie e impianti idraulici a Velletri</title>
+  <meta name="description" content="Termoidraulica La Fenice a Velletri: caldaie, impianti idraulici e termoidraulici, manutenzione e assistenza. Oltre 20 anni di attività, 6 filiali nel Lazio, 4.7 su 5 su Google. Chiama 06 947 6005.">
+  <meta name="theme-color" content="#21150D">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <meta property="og:title" content="Termoidraulica La Fenice — Caldaie e impianti idraulici a Velletri">
+  <meta property="og:description" content="Oltre 20 anni di acqua calda e caldaie a norma. 6 filiali nel Lazio, 4.7 su 5 su Google. Chiama 06 947 6005.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:image" content="images/warm-1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="fonts/fraunces-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="fonts/fonts.css">
+
+  <!-- Hero: CSS @keyframes INLINE — mai GSAP above the fold -->
+  <style>
+    .hero__badge, .hero__subtitle, .hero__cta, .hero__stats, .hero__scroll { opacity: 0; }
+    .hero__badge { animation: heroFadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s both; }
+    .hero__subtitle { animation: heroFadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both; }
+    .hero__cta { animation: heroFadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.75s both; }
+    .hero__stats { animation: heroFadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.9s both; }
+    .hero__scroll { animation: heroFadeUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.15s both, scrollBob 2.4s ease-in-out 2s infinite; }
+    .hero__title .word { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.09em; margin-bottom: -0.09em; }
+    .hero__title .word > span { display: inline-block; opacity: 0; animation: heroWordUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+    .hero__flame--main { animation: flameDrift 7s ease-in-out infinite; }
+    .hero__flame--mini { animation: flameDrift 9s ease-in-out 1.2s infinite; }
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroWordUp {
+      from { opacity: 0; transform: translateY(110%); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scrollBob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+    @keyframes flameDrift {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-14px) rotate(3deg); }
+    }
+  </style>
+
+  <noscript>
+    <style>
+      .hero__badge, .hero__title .word > span, .hero__subtitle, .hero__cta,
+      .hero__stats, .hero__scroll, .reveal, .service-card, .trust__stat {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#top">
+        <svg class="nav__brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="15" fill="#21150D"/>
+          <path d="M32 7c6.4 8.4 14.5 13.2 14.5 22.4a14.5 14.5 0 1 1-29 0C17.5 20.2 25.6 15.4 32 7z" fill="#D95F1E"/>
+          <path d="M32 23c2.7 3.6 6.3 5.7 6.3 10a6.3 6.3 0 1 1-12.6 0c0-4.3 3.6-6.4 6.3-10z" fill="#FBF5EC" opacity="0.88"/>
+        </svg>
+        <span class="nav__brand-name">La Fenice<small>Termoidraulica · Velletri</small></span>
+      </a>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Menu principale">
+        <a class="nav__link" href="#servizi">Servizi</a>
+        <a class="nav__link" href="#chi-siamo">Chi siamo</a>
+        <a class="nav__link" href="#contatti">Contatti</a>
+        <a class="nav__link" href="#mappa">Dove siamo</a>
+        <span class="nav__cta">
+          <a class="btn btn--primary" href="tel:+39069476005">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Chiama 06 947 6005
+          </a>
+        </span>
+      </nav>
+
+      <button class="nav__burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <svg class="hero__flame hero__flame--main" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="hfMain" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#B34A12"/>
+            <stop offset="0.55" stop-color="#D95F1E"/>
+            <stop offset="1" stop-color="#F2A03D"/>
+          </linearGradient>
+        </defs>
+        <path d="M100 12c20 26 45 41 45 70a45 45 0 1 1-90 0c0-29 25-44 45-70z" fill="url(#hfMain)" opacity="0.5"/>
+        <path d="M100 38c14 18 31 29 31 49a31 31 0 1 1-62 0c0-20 17-31 31-49z" fill="url(#hfMain)" opacity="0.8"/>
+      </svg>
+      <svg class="hero__flame hero__flame--mini" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="hfMini" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#B34A12"/>
+            <stop offset="0.55" stop-color="#D95F1E"/>
+            <stop offset="1" stop-color="#F2A03D"/>
+          </linearGradient>
+        </defs>
+        <path d="M100 12c20 26 45 41 45 70a45 45 0 1 1-90 0c0-29 25-44 45-70z" fill="url(#hfMini)"/>
+      </svg>
+
+      <div class="container hero__inner">
+        <p class="hero__badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c2.5 3.3 5.5 5.6 5.5 9.5a5.5 5.5 0 1 1-11 0C6.5 7.6 9.5 5.3 12 2z"/></svg>
+          Termoidraulica dal 20+ anni — 6 filiali nel Lazio
+        </p>
+
+        <h1 class="hero__title">
+          <span class="word"><span>Oltre</span></span>
+          <span class="word"><span>20</span></span>
+          <span class="word"><span>anni</span></span>
+          <span class="word"><span>di</span></span>
+          <span class="word word--accent"><span>acqua</span></span>
+          <span class="word word--accent"><span>calda</span></span>
+          <span class="word"><span>e</span></span>
+          <span class="word"><span>caldaie</span></span>
+          <span class="word"><span>a</span></span>
+          <span class="word"><span>norma</span></span>
+        </h1>
+
+        <p class="hero__subtitle">
+          Caldaie, impianti idraulici e riparazioni per famiglie e condomini a Velletri e nei Castelli Romani.
+          Un'azienda che risponde: 4.7 su 5 su Google, 6 filiali nel Lazio.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="tel:+39069476005">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Chiama 06 947 6005
+          </a>
+          <a class="btn btn--ghost" href="#servizi">Scopri i servizi</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__rating">
+            <span class="hero__rating-stars" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+            </span>
+            <span><strong>4.7 su 5</strong> — 26 recensioni Google</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#servizi">
+        Scorri
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ TRUST BAR ============ -->
+    <section class="trust" aria-label="Numeri in breve">
+      <div class="container">
+        <div class="trust__card">
+          <div class="trust__stat">
+            <div class="trust__num">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+              <span class="counter" data-count="4.7" data-decimals="1">4.7</span>
+            </div>
+            <p class="trust__label">su 5 — Google</p>
+          </div>
+          <div class="trust__stat">
+            <div class="trust__num">
+              <span class="counter" data-count="20" data-suffix="+">20+</span>
+            </div>
+            <p class="trust__label">anni di attività</p>
+          </div>
+          <div class="trust__stat">
+            <div class="trust__num">
+              <span class="counter" data-count="6">6</span>
+            </div>
+            <p class="trust__label">filiali nel Lazio</p>
+          </div>
+          <div class="trust__stat">
+            <div class="trust__num">
+              <span class="counter" data-count="26">26</span>
+            </div>
+            <p class="trust__label">recensioni Google</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVIZI ============ -->
+    <section class="services section" id="servizi">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="kicker">Cosa facciamo</span>
+          <h2 class="h-display">Impianti che funzionano, <em>anno dopo anno</em></h2>
+          <p>Dall'installazione alla manutenzione: tutto quello che serve perché in casa ci sia sempre acqua calda e un impianto a norma.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card">
+            <span class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M9 3v18M15 3v18"/></svg>
+            </span>
+            <h3>Installazione caldaie</h3>
+            <p>Caldaie installate a regola d'arte, da chi lo fa da oltre 20 anni.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h9a4 4 0 0 1 4 4v2"/><path d="M3 6v6a3 3 0 0 0 3 3h2"/><path d="M16 15v6"/><circle cx="3.5" cy="6" r="1.6"/><circle cx="16" cy="12" r="1.6"/></svg>
+            </span>
+            <h3>Impianti idraulici e termoidraulici</h3>
+            <p>Impianti nuovi e ristrutturazioni, curati dall'inizio alla fine.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </span>
+            <h3>Manutenzione e riparazioni</h3>
+            <p>Controlli e riparazioni per tenere l'impianto in salute tutto l'anno.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </span>
+            <h3>Assistenza urgente</h3>
+            <p>Quando l'acqua calda manca, rispondiamo. Chiama e ti diciamo come procedere.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CHI SIAMO ============ -->
+    <section class="about section" id="chi-siamo">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__media reveal">
+            <div class="img-placeholder">
+              <img src="images/warm-1.jpg" alt="Atmosfera calda e accogliente" width="1200" height="800" loading="lazy">
+            </div>
+            <div class="about__badge">
+              <span class="about__badge-num">20+</span>
+              <span class="about__badge-txt">anni di attività<br>nel Lazio</span>
+            </div>
+          </div>
+
+          <div class="about__copy">
+            <span class="kicker reveal">Chi siamo</span>
+            <h2 class="h-display reveal">Un'azienda viva, che scalda le case da <em>oltre 20 anni</em></h2>
+            <p class="reveal">Termoidraulica La Fenice è un'azienda termoidraulica con oltre 20 anni di attività e 6 filiali nel Lazio. Da Velletri seguiamo famiglie, condomini e piccole attività dei Castelli Romani.</p>
+            <p class="reveal">Quando l'acqua calda manca, c'è una squadra che risponde: una chiamata e ti diciamo come procedere, senza giri di parole.</p>
+
+            <ul class="about__list">
+              <li class="reveal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                Oltre 20 anni di esperienza sul campo
+              </li>
+              <li class="reveal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                6 filiali nel Lazio
+              </li>
+              <li class="reveal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                4.7 su 5 su Google, 26 recensioni
+              </li>
+            </ul>
+
+            <div class="reveal">
+              <a class="btn btn--primary" href="tel:+39069476005">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Chiama 06 947 6005
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RATING BAND ============ -->
+    <section class="rating-band" aria-label="Recensioni Google">
+      <div class="container rating-band__inner">
+        <div class="rating-band__stars reveal" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+        </div>
+        <h2 class="reveal"><span class="num">4.7 su 5</span> — 26 recensioni Google</h2>
+        <p class="reveal">La fiducia si costruisce un intervento alla volta.</p>
+      </div>
+    </section>
+
+    <!-- ============ CONTATTI ============ -->
+    <section class="contact section" id="contatti">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Contatti</span>
+          <h2 class="h-display">Quando serve, <em>chiama</em></h2>
+          <p>Rispondiamo al telefono e ti diciamo come procedere, anche solo per un preventivo.</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__card reveal">
+            <h3>Parliamone</h3>
+            <p>Una chiamata e ci occupiamo del resto. Niente moduli, niente attese: il telefono è la via più veloce.</p>
+
+            <div class="contact__rows">
+              <div class="contact__row">
+                <span class="contact__row-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <div>
+                  <p class="contact__row-label">Telefono</p>
+                  <p class="contact__row-value"><a href="tel:+39069476005">06 947 6005</a></p>
+                </div>
+              </div>
+
+              <div class="contact__row">
+                <span class="contact__row-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <div>
+                  <p class="contact__row-label">Dove siamo</p>
+                  <p class="contact__row-value">Viale Salvo D'Acquisto, 10/A<br>00049 Velletri (RM)</p>
+                </div>
+              </div>
+
+              <div class="contact__row">
+                <span class="contact__row-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </span>
+                <div>
+                  <p class="contact__row-label">Orari</p>
+                  <p class="contact__row-value">Su chiamata — chiama e ci sentiamo</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__cta">
+              <a class="btn btn--primary" href="tel:+39069476005">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Chiama 06 947 6005
+              </a>
+            </div>
+
+            <div class="contact__ig reveal">
+              <div class="contact__ig-txt">
+                <strong>Seguici su Instagram</strong>
+                <span>@lafenicetermoidraulica — un'azienda viva, 6 filiali nel Lazio</span>
+              </div>
+              <a class="contact__ig-link" href="https://www.instagram.com/lafenicetermoidraulica/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+                Seguici
+              </a>
+            </div>
+          </div>
+
+          <div class="contact__media reveal">
+            <div class="img-placeholder">
+              <img src="images/warm-2.jpg" alt="Atmosfera calda e accogliente" width="1200" height="800" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MAPPA ============ -->
+    <section class="map section--tight" id="mappa">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Dove siamo</span>
+          <h2 class="h-display">Ci trovi a <em>Velletri</em></h2>
+          <p>Viale Salvo D'Acquisto, 10/A — 00049 Velletri (RM)</p>
+        </div>
+
+        <div class="map__frame reveal">
+          <iframe src="https://maps.google.com/maps?q=Viale+Salvo+D'Acquisto+10A+Velletri&output=embed" title="Mappa — Termoidraulica La Fenice, Viale Salvo D'Acquisto 10/A, 00049 Velletri (RM)" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <a class="map__open" href="https://www.google.com/maps?q=41.6730667,12.7749340" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
+          Apri in Google Maps
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="footer__brand" href="#top">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="15" fill="#D95F1E"/>
+              <path d="M32 7c6.4 8.4 14.5 13.2 14.5 22.4a14.5 14.5 0 1 1-29 0C17.5 20.2 25.6 15.4 32 7z" fill="#FBF5EC" opacity="0.95"/>
+              <path d="M32 23c2.7 3.6 6.3 5.7 6.3 10a6.3 6.3 0 1 1-12.6 0c0-4.3 3.6-6.4 6.3-10z" fill="#D95F1E"/>
+            </svg>
+            <span class="footer__brand-name">Termoidraulica La Fenice</span>
+          </a>
+          <p class="footer__desc">Oltre 20 anni di acqua calda e caldaie a norma. 6 filiali nel Lazio, 4.7 su 5 su Google.</p>
+        </div>
+
+        <div>
+          <h4>Contatti</h4>
+          <ul class="footer__list">
+            <li><a href="tel:+39069476005">06 947 6005</a></li>
+            <li>Viale Salvo D'Acquisto, 10/A<br>00049 Velletri (RM)</li>
+            <li>Orari: su chiamata</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Seguici</h4>
+          <ul class="footer__list">
+            <li><a href="https://www.instagram.com/lafenicetermoidraulica/" target="_blank" rel="noopener">Instagram — @lafenicetermoidraulica</a></li>
+            <li>Ci trovi anche su Facebook</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 Termoidraulica La Fenice — Velletri (RM)</span>
+        <span>Termoidraulica dal 20+ anni · 6 filiali nel Lazio</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ STICKY CTA MOBILE ============ -->
+  <div class="sticky-cta">
+    <a class="sticky-cta__btn" href="tel:+39069476005">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Chiama 06 947 6005</span>
+    </a>
+  </div>
+
+  <!-- ============ SCRIPTS (vendor locali, zero CDN) ============ -->
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+  <script src="js/vendor/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/counters.js"></script>
+
+  <!-- Delay parole hero: sincrono, alla fine del body, forEach (mai indici) -->
+  <script>
+    (function () {
+      var spans = document.querySelectorAll('.hero__title .word > span');
+      spans.forEach(function (el, i) {
+        el.style.animationDelay = (0.15 + i * 0.07).toFixed(2) + 's';
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+/* ============================================================
+   Termoidraulica La Fenice — base.css
+   Reset, tipografia, utilities, noise, progress bar
+   ============================================================ */
+
+/* ---------- reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ---------- texture grana (GPU, zero request) ---------- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  mix-blend-mode: multiply;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--deep);
+}
+
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- progress bar (scroll-driven) ---------- */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  z-index: 1001;
+  animation: progressScroll linear both;
+  animation-timeline: scroll();
+  transform-origin: left;
+}
+
+@keyframes progressScroll {
+  to { width: 100%; }
+}
+
+@supports not (animation-timeline: scroll()) {
+  .progress-bar { display: none; }
+}
+
+/* ---------- layout ---------- */
+.container {
+  width: min(100% - 40px, var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding: clamp(72px, 9vw, 120px) 0;
+}
+
+.section--tight {
+  padding: clamp(56px, 7vw, 90px) 0;
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: calc(var(--nav-h) + 12px);
+}
+
+/* ---------- tipografia ---------- */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-strong);
+}
+
+.kicker::before {
+  content: '';
+  width: 26px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  flex: none;
+}
+
+.h-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-variation-settings: 'opsz' 60;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.h-display em {
+  font-style: italic;
+  color: var(--primary);
+}
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.section-head .h-display {
+  font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+  margin: 14px 0 14px;
+}
+
+.section-head p {
+  color: rgba(33, 21, 13, 0.72);
+  font-size: 1.0625rem;
+}
+
+.section-head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-head--center .kicker {
+  justify-content: center;
+}
+
+.section-head--center .kicker::after {
+  content: '';
+  width: 26px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  flex: none;
+}
+
+/* ---------- bottoni ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  border: 2px solid transparent;
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out),
+    background-color 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.btn svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+.btn--primary {
+  background: var(--primary-strong);
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(179, 74, 18, 0.35);
+}
+
+.btn--primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(217, 95, 30, 0.4);
+}
+
+.btn--ghost {
+  border-color: rgba(33, 21, 13, 0.28);
+  color: var(--ink);
+  background: transparent;
+}
+
+.btn--ghost:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.btn--light {
+  background: var(--accent);
+  color: var(--deep);
+}
+
+.btn--light:hover {
+  background: #fbb95e;
+  transform: translateY(-2px);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .btn { min-height: 48px; }
+}
+
+/* ---------- reveal: default VISIBILE (bulletproof) ----------
+   Il pre-hide avviene via JS (gsap.set) SOLO se GSAP è vivo. */
+.reveal {
+  opacity: 1;
+}
+
+/* ---------- placeholder immagini lazy ---------- */
+.img-placeholder {
+  position: relative;
+  background: linear-gradient(135deg, var(--paper-deep), var(--paper-soft));
+  overflow: hidden;
+}
+
+.img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
