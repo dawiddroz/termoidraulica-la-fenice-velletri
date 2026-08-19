@@ -1,20 +1,30 @@
 /* ============================================================
    Termoidraulica La Fenice — design tokens
-   Identità: "Fiamma viva" — ambra/arancio bruciato + crema caldo
+   Identità: "Fenice Rosso & Blu" — dal logo ufficiale
+   rosso #FE1E02 · azzurro #0487FA · blu profondo #000AF4
    ============================================================ */
 :root {
-  /* palette */
-  --paper: #FBF5EC;            /* crema caldo */
-  --paper-soft: #F6ECDA;       /* crema più scuro per sfondi/card */
-  --paper-deep: #EFE1C9;       /* crema profondo per bordi/placeholder */
-  --card: #FFFDF8;             /* superficie card */
-  --ink: #21150D;              /* marrone notte */
-  --deep: #21150D;
-  --primary: #D95F1E;          /* ambra / arancio bruciato */
-  --primary-strong: #B34A12;   /* contrasto ≥4.5:1 su chiaro */
-  --primary-hover: #C45215;    /* hover leggibile (4.6:1 con bianco) */
-  --accent: #F2A03D;           /* ambra chiara */
-  --accent-soft: rgba(242, 160, 61, 0.16);
+  /* palette — brand reale */
+  --paper: #FAFCFF;            /* bianco ghiaccio (dal logo) */
+  --paper-soft: #EFF4FB;       /* azzurro ghiaccio per sfondi/card */
+  --paper-deep: #DCE7F5;       /* azzurro profondo per bordi/placeholder */
+  --card: #FFFFFF;             /* superficie card */
+  --ink: #0A1B3D;              /* navy scuro (testo) */
+  --ink-soft: rgba(10, 27, 61, 0.72);
+  --deep: #071229;             /* navy notte (sezioni scure) */
+  --deep-soft: #0C1E45;
+
+  --primary: #E01400;          /* rosso fenice (brand, tono leggibile) */
+  --primary-strong: #B70F00;   /* contrasto ≥4.5:1 su chiaro */
+  --primary-hover: #C81200;
+  --brand-red: #FE1E02;        /* rosso puro dal logo (decor) */
+
+  --accent: #0487FA;           /* azzurro brand */
+  --accent-strong: #0071E0;    /* contrasto ≥4.5:1 su chiaro */
+  --accent-soft: rgba(4, 135, 250, 0.13);
+  --brand-blue: #000AF4;       /* blu profondo dal logo (decor) */
+
+  --star: #F5A623;             /* stelle rating (leggibile su navy) */
 
   /* tipografia */
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
@@ -30,8 +40,8 @@
   --radius-sm: 12px;
 
   /* ombre */
-  --shadow-soft: 0 18px 45px rgba(33, 21, 13, 0.10);
-  --shadow-lift: 0 28px 70px rgba(33, 21, 13, 0.18);
+  --shadow-soft: 0 18px 45px rgba(7, 18, 41, 0.10);
+  --shadow-lift: 0 28px 70px rgba(7, 18, 41, 0.18);
 
   /* motion */
   --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
