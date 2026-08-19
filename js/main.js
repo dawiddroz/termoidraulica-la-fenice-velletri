@@ -89,6 +89,50 @@
     });
   });
 
+  /* ---------- Esploratore sedi: pill -> mappa interattiva ---------- */
+  function initBranches() {
+    var pills = document.querySelectorAll('.branch-pill');
+    var map = document.getElementById('branch-map');
+    var city = document.getElementById('branch-city');
+    var addr = document.getElementById('branch-addr');
+    var dir = document.getElementById('branch-dir');
+    if (!pills.length || !map || !city || !addr || !dir) return;
+
+    function activate(pill) {
+      pills.forEach(function (p) {
+        p.classList.remove('is-active');
+        p.setAttribute('aria-selected', 'false');
+      });
+      pill.classList.add('is-active');
+      pill.setAttribute('aria-selected', 'true');
+
+      var embed = pill.getAttribute('data-embed');
+      var d = pill.getAttribute('data-dir');
+      var c = pill.getAttribute('data-city');
+      var a = pill.getAttribute('data-addr');
+
+      if (embed) {
+        map.src = embed;
+        map.title = 'Mappa — Termoidraulica La Fenice, ' + c;
+      }
+      if (c) city.textContent = c;
+      if (a) addr.textContent = a;
+      if (d) dir.href = d;
+    }
+
+    pills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        activate(pill);
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBranches);
+  } else {
+    initBranches();
+  }
+
   /* ---------- Safety net: rivela tutto se GSAP non è mai partito ---------- */
   setTimeout(function () {
     if (window.__gsapReady) return;

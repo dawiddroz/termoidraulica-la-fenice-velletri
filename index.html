@@ -84,7 +84,6 @@
         <a class="nav__link" href="#servizi">Servizi</a>
         <a class="nav__link" href="#chi-siamo">Chi siamo</a>
         <a class="nav__link" href="#contatti">Contatti</a>
-        <a class="nav__link" href="#mappa">Dove siamo</a>
         <a class="nav__link" href="#sedi">Le sedi</a>
         <span class="nav__cta">
           <a class="btn btn--primary" href="tel:+39069476005">
@@ -395,26 +394,6 @@
       </div>
     </section>
 
-    <!-- ============ MAPPA ============ -->
-    <section class="map section--tight" id="mappa">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">Dove siamo</span>
-          <h2 class="h-display">Ci trovi a <em>Velletri</em></h2>
-          <p>Viale Salvo D'Acquisto, 10/A — 00049 Velletri (RM)</p>
-        </div>
-
-        <div class="map__frame reveal">
-          <iframe src="https://maps.google.com/maps?q=Viale+Salvo+D'Acquisto+10A+Velletri&output=embed" title="Mappa — Termoidraulica La Fenice, Viale Salvo D'Acquisto 10/A, 00049 Velletri (RM)" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <a class="map__open" href="https://www.google.com/maps?q=41.6730667,12.7749340" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
-          Apri in Google Maps
-        </a>
-      </div>
-    </section>
-
     <!-- ============ LE SEDI ============ -->
     <section class="branches section" id="sedi">
       <div class="container">
@@ -424,61 +403,69 @@
           <p>Dalla sede storica di Monte Compatri a Roma e Velletri: la stessa esperienza di oltre 20 anni, più vicino a te.</p>
         </div>
 
-        <div class="branches__grid">
-          <article class="branch-card reveal">
-            <span class="branch-card__city">Monte Compatri</span>
-            <h3>La sede storica</h3>
-            <p class="branch-card__addr">Via Casilina, 1510<br>00077 Monte Compatri (RM)</p>
-            <p class="branch-card__meta">4,5 su 5 — 105 recensioni Google</p>
-            <a class="branch-card__link" href="https://www.google.com/maps/search/?api=1&query=Via+Casilina+1510+Monte+Compatri" target="_blank" rel="noopener">
-              Indicazioni
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-            </a>
-          </article>
+        <div class="branches__explorer reveal">
+          <div class="branches__pills" role="tablist" aria-label="Sedi di Termoidraulica La Fenice">
+            <button class="branch-pill is-active" type="button" role="tab" aria-selected="true"
+              data-embed="https://maps.google.com/maps?q=Via+Casilina+1510+Monte+Compatri&output=embed"
+              data-dir="https://www.google.com/maps/dir/?api=1&destination=Via+Casilina+1510+Monte+Compatri"
+              data-city="Monte Compatri"
+              data-addr="Via Casilina, 1510 — 00077 Monte Compatri (RM)">
+              <span class="branch-pill__city">Monte Compatri</span>
+              <span class="branch-pill__sub">La sede storica</span>
+            </button>
 
-          <article class="branch-card branch-card--main reveal">
-            <span class="branch-card__city">Velletri</span>
-            <h3>La sede dei Castelli</h3>
-            <p class="branch-card__addr">Viale Salvo D'Acquisto, 10/A<br>00049 Velletri (RM)</p>
-            <p class="branch-card__meta">4,7 su 5 — 26 recensioni Google</p>
-            <a class="branch-card__link" href="https://www.google.com/maps/search/?api=1&query=Viale+Salvo+D'Acquisto+10A+Velletri" target="_blank" rel="noopener">
-              Indicazioni
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-            </a>
-          </article>
+            <button class="branch-pill" type="button" role="tab" aria-selected="false"
+              data-embed="https://maps.google.com/maps?q=Viale+Salvo+D'Acquisto+10A+Velletri&output=embed"
+              data-dir="https://www.google.com/maps/dir/?api=1&destination=Viale+Salvo+D'Acquisto+10A+Velletri"
+              data-city="Velletri"
+              data-addr="Viale Salvo D'Acquisto, 10/A — 00049 Velletri (RM)">
+              <span class="branch-pill__city">Velletri</span>
+              <span class="branch-pill__sub">La sede dei Castelli</span>
+            </button>
 
-          <article class="branch-card reveal">
-            <span class="branch-card__city">Roma — Est</span>
-            <h3>Circonvallazione Orientale</h3>
-            <p class="branch-card__addr">Circonvallazione Orientale, 4691<br>00178 Roma (RM)</p>
-            <p class="branch-card__meta">4,6 su 5 — 35 recensioni Google</p>
-            <a class="branch-card__link" href="https://www.google.com/maps/search/?api=1&query=Circonvallazione+Orientale+4691+Roma" target="_blank" rel="noopener">
-              Indicazioni
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-            </a>
-          </article>
+            <button class="branch-pill" type="button" role="tab" aria-selected="false"
+              data-embed="https://maps.google.com/maps?q=Circonvallazione+Orientale+4691+Roma&output=embed"
+              data-dir="https://www.google.com/maps/dir/?api=1&destination=Circonvallazione+Orientale+4691+Roma"
+              data-city="Roma — Est"
+              data-addr="Circonvallazione Orientale, 4691 — 00178 Roma (RM)">
+              <span class="branch-pill__city">Roma — Est</span>
+              <span class="branch-pill__sub">Circonvallazione Orientale</span>
+            </button>
 
-          <article class="branch-card reveal">
-            <span class="branch-card__city">Roma — Casilina</span>
-            <h3>Via Casilina</h3>
-            <p class="branch-card__addr">Via Casilina, 1048<br>00169 Roma (RM)</p>
-            <p class="branch-card__meta">5,0 su 5 — 7 recensioni Google</p>
-            <a class="branch-card__link" href="https://www.google.com/maps/search/?api=1&query=Via+Casilina+1048+Roma" target="_blank" rel="noopener">
-              Indicazioni
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-            </a>
-          </article>
+            <button class="branch-pill" type="button" role="tab" aria-selected="false"
+              data-embed="https://maps.google.com/maps?q=Via+Casilina+1048+Roma&output=embed"
+              data-dir="https://www.google.com/maps/dir/?api=1&destination=Via+Casilina+1048+Roma"
+              data-city="Roma — Casilina"
+              data-addr="Via Casilina, 1048 — 00169 Roma (RM)">
+              <span class="branch-pill__city">Roma — Casilina</span>
+              <span class="branch-pill__sub">Via Casilina</span>
+            </button>
 
-          <article class="branch-card reveal">
-            <span class="branch-card__city">Roma — EUR</span>
-            <h3>F.A.I.T. 83 by La Fenice</h3>
-            <p class="branch-card__addr">Vicolo del Colle della Strega, 20/22A<br>00143 Roma (RM)</p>
-            <p class="branch-card__meta">3,9 su 5 — 150 recensioni Google</p>
-            <a class="branch-card__link" href="https://www.google.com/maps/search/?api=1&query=Vicolo+del+Colle+della+Strega+20-22A+Roma" target="_blank" rel="noopener">
-              Indicazioni
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-            </a>
-          </article>
+            <button class="branch-pill" type="button" role="tab" aria-selected="false"
+              data-embed="https://maps.google.com/maps?q=Vicolo+del+Colle+della+Strega+20-22A+Roma&output=embed"
+              data-dir="https://www.google.com/maps/dir/?api=1&destination=Vicolo+del+Colle+della+Strega+20-22A+Roma"
+              data-city="Roma — EUR"
+              data-addr="Vicolo del Colle della Strega, 20/22A — 00143 Roma (RM)">
+              <span class="branch-pill__city">Roma — EUR</span>
+              <span class="branch-pill__sub">F.A.I.T. 83 by La Fenice</span>
+            </button>
+          </div>
+
+          <div class="branches__map">
+            <div class="branches__map-frame">
+              <iframe id="branch-map" src="https://maps.google.com/maps?q=Via+Casilina+1510+Monte+Compatri&output=embed" title="Mappa — Termoidraulica La Fenice, Monte Compatri" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="branches__mapbar">
+              <div class="branches__mapinfo">
+                <span class="branches__map-city" id="branch-city">Monte Compatri</span>
+                <p class="branches__map-addr" id="branch-addr">Via Casilina, 1510 — 00077 Monte Compatri (RM)</p>
+              </div>
+              <a class="btn btn--primary branches__dir" id="branch-dir" href="https://www.google.com/maps/dir/?api=1&destination=Via+Casilina+1510+Monte+Compatri" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                Indicazioni
+              </a>
+            </div>
+          </div>
         </div>
 
         <p class="branches__note reveal">Chiama <a href="tel:+39069476005">06 947 6005</a>: ti risponde la sede più vicina.</p>
