@@ -801,6 +801,151 @@
   text-decoration: underline;
 }
 
+/* ================= LE SEDI ================= */
+.branches {
+  background: linear-gradient(180deg, var(--paper), var(--paper-soft));
+}
+
+.branches__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.branch-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 28px 26px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  border: 1px solid rgba(10, 27, 61, 0.08);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out),
+    border-color 0.35s;
+  overflow: hidden;
+}
+
+.branch-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.branch-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lift);
+  border-color: rgba(4, 135, 250, 0.28);
+}
+
+.branch-card:hover::before {
+  opacity: 1;
+}
+
+.branch-card--main {
+  border-color: rgba(224, 20, 0, 0.28);
+  background: linear-gradient(160deg, var(--card), rgba(224, 20, 0, 0.05));
+}
+
+.branch-card--main::before {
+  opacity: 1;
+}
+
+.branch-card__city {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  margin-bottom: 10px;
+}
+
+.branch-card__city::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex: none;
+}
+
+.branch-card h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-variation-settings: 'opsz' 60;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+.branch-card__addr {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.branch-card__meta {
+  margin-top: 12px;
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: var(--ink);
+  opacity: 0.75;
+}
+
+.branch-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 18px;
+  min-height: 44px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--primary-strong);
+  text-decoration: none;
+}
+
+.branch-card__link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.25s var(--ease-out);
+}
+
+.branch-card__link:hover {
+  text-decoration: underline;
+}
+
+.branch-card__link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.branches__note {
+  margin-top: 30px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.branches__note a {
+  color: var(--primary-strong);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.branches__note a:hover {
+  text-decoration: underline;
+}
+
 /* ================= STICKY CTA MOBILE ================= */
 .sticky-cta {
   position: fixed;
@@ -861,6 +1006,10 @@
 
   .about__media {
     max-width: 560px;
+  }
+
+  .branches__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact__grid {
@@ -963,6 +1112,10 @@
   }
 
   .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .branches__grid {
     grid-template-columns: 1fr;
   }
 
